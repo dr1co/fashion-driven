@@ -108,7 +108,6 @@ strong {
     font-family: 'Roboto', sans-serif;
     font-size: 16px;
     color: #FFFFFF;
-    cursor: pointer;
 }
 
 .fashion-driven-art {
@@ -138,7 +137,7 @@ strong {
 
 .last-orders li {
     margin: 16px 16px 16px 0;
-    width: 202px;
+    min-width: 202px;
     height: 257px;
     background-color: #FFFFFF;
     border-radius: 10px;
@@ -147,6 +146,7 @@ strong {
     flex-direction: column;
     justify-content: space-between;
     align-items: center;
+    cursor: pointer;
 }
 
 .last-orders li:last-of-type {
@@ -156,6 +156,7 @@ strong {
 .last-orders li img {
     width: 180px;
     height: 180px;
+    object-fit: cover;
     margin-bottom: 8px;
 }
 
@@ -164,4 +165,13 @@ strong {
     font-size: 20px;
     word-wrap: break-word;
     text-align: center;
+}
+
+.selected {
+    border: 3px solid #404EED;
+}
+
+.image-reference .enabled {
+    background-color: #404EED;
+    cursor: pointer;
 }

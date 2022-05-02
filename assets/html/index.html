@@ -23,19 +23,19 @@
                 <div class="model types">
                     <h1>Escolha o modelo</h1>
                     <ul>
-                        <li onclick="selectType(this)">
+                        <li onclick="selectModelType(this)">
                             <div class="type-image">
                                 <img src="/media/FashionDriven/tshirt.png" />
                             </div>
                             <h1>T-shirt</h1>
                         </li>
-                        <li onclick="selectType(this)">
+                        <li onclick="selectModelType(this)">
                             <div class="type-image">
                                 <img src="/media/FashionDriven/Camiseta.png" />
                             </div>
                             <h1>Camiseta</h1>
                         </li>
-                        <li onclick="selectType(this)">
+                        <li onclick="selectModelType(this)">
                             <div class="type-image">
                                 <img src="/media/FashionDriven/Mangalonga.png" />
                             </div>
@@ -46,42 +46,42 @@
                 <div class="collar types">
                     <h1>Escolha a gola</h1>
                     <ul>
-                        <li onclick="selectType(this)">
+                        <li onclick="selectCollarType(this)">
                             <div class="type-image">
                                 <img src="/media/FashionDriven/GolaV.png" />
                             </div>
                             <h1>Gola V</h1>
-                        </li onclick="selectType(this)">
-                        <li>
+                        </li>
+                        <li onclick="selectCollarType(this)">
                             <div class="type-image">
                                 <img src="/media/FashionDriven/GolaRedonda.png" />
                             </div>
                             <h1>Gola redonda</h1>
-                        </li onclick="selectType(this)">
-                        <li>
+                        </li>
+                        <li onclick="selectCollarType(this)">
                             <div class="type-image">
                                 <img src="/media/FashionDriven/GolaPolo.png" />
                             </div>
                             <h1>Gola polo</h1>
-                        </li onclick="selectType(this)">
+                        </li>
                     </ul>
                 </div>
                 <div class="texture types">
                     <h1>Escolha o tecido</h1>
                     <ul>
-                        <li onclick="selectType(this)">
+                        <li onclick="selectTextureType(this)">
                             <div class="type-image">
                                 <img src="/media/FashionDriven/Seda.png" />
                             </div>
                             <h1>Seda</h1>
                         </li>
-                        <li onclick="selectType(this)">
+                        <li onclick="selectTextureType(this)">
                             <div class="type-image">
                                 <img src="/media/FashionDriven/Algodão.png" />
                             </div>
                             <h1>Algodão</h1>
                         </li>
-                        <li onclick="selectType(this)">
+                        <li onclick="selectTextureType(this)">
                             <div class="type-image">
                                 <img src="/media/FashionDriven/Poliester.png" />
                             </div>
@@ -91,7 +91,7 @@
                 </div>
                 <div class="image-reference">
                     <h1>Imagem de Referência</h1>
-                    <input class="request-image" type="text" placeholder="Insira o link">
+                    <input type="text" placeholder="Insira o link">
                     <button onclick="createOrderRequest()">Confirmar Pedido</button>
                 </div>
             </div>
@@ -102,49 +102,11 @@
         <div class="last-orders">
             <h1>Últimos pedidos</h1>
             <ul>
-                <li onclick="selectOrder(this)">
-                    <img src="/media/FashionDriven/Blusa1.png" />
-                    <h2><strong>Criador</strong>: Agata</h2>
-                </li>
-                <li onclick="selectOrder(this)">
-                    <img src="/media/FashionDriven/Blusa1.png" />
-                    <h2><strong>Criador</strong>: Agata</h2>
-                </li>
-                <li onclick="selectOrder(this)">
-                    <img src="/media/FashionDriven/Blusa1.png" />
-                    <h2><strong>Criador</strong>: Agata</h2>
-                </li>
-                <li onclick="selectOrder(this)">
-                    <img src="/media/FashionDriven/Blusa1.png" />
-                    <h2><strong>Criador</strong>: Agata</h2>
-                </li>
-                <li onclick="selectOrder(this)">
-                    <img src="/media/FashionDriven/Blusa1.png" />
-                    <h2><strong>Criador</strong>: Agata</h2>
-                </li>
-                <li onclick="selectOrder(this)">
-                    <img src="/media/FashionDriven/Blusa1.png" />
-                    <h2><strong>Criador</strong>: Agata</h2>
-                </li>
-                <li onclick="selectOrder(this)">
-                    <img src="/media/FashionDriven/Blusa1.png" />
-                    <h2><strong>Criador</strong>: Agata</h2>
-                </li>
-                <li onclick="selectOrder(this)">
-                    <img src="/media/FashionDriven/Blusa1.png" />
-                    <h2><strong>Criador</strong>: Agata</h2>
-                </li>
-                <li onclick="selectOrder(this)">
-                    <img src="/media/FashionDriven/Blusa1.png" />
-                    <h2><strong>Criador</strong>: Agata</h2>
-                </li>
-                <li onclick="selectOrder(this)">
-                    <img src="/media/FashionDriven/Blusa1.png" />
-                    <h2><strong>Criador</strong>: Agata</h2>
-                </li>
+                
             </ul>
         </div>
     </main>
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
     <script src="/assets/scripts/script.js"></script>
 </body>
 </html>
