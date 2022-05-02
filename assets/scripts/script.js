@@ -124,30 +124,30 @@ function loadLastOrders(element) {
     ordersList.innerHTML = "";
     for(let i = 0 ; i < element.data.length ; i++)
     {
-        ordersList.innerHTML += `<li onclick="selectOrder('${element.data[i].image}', '${element.data[i].model}', '${element.data[i].neck}', '${element.data[i].material}', '${element.data[i].owner}')">
+        ordersList.innerHTML += `<li onclick="selectOrder('${encodeURIComponent(JSON.stringify(element.data[i]))}')">
             <img src="${element.data[i].image}" />
             <h2><strong>Criador</strong>: ${element.data[i].owner}</h2>
         </li>`
     }
 }
 
-function selectOrder(image, model, collar, texture, owner) {
+function selectOrder(data) {
+    data = JSON.parse(decodeURIComponent(data));
     const confirmation = confirm("Deseja encomendar esta blusa?");
     if(confirmation)
     {
         const orderRequest = {
-            "model": model,
-            "neck": collar,
-            "material": texture,
-            "image": image,
-            "owner": owner,
+            "model": data.model,
+            "neck": data.neck,
+            "material": data.material,
+            "image": data.image,
+            "owner": data.owner,
             "author": name,
         };
         const request = axios.post('https://mock-api.driven.com.br/api/v4/shirts-api/shirts', orderRequest);
         request.then(function () {
             alert("Sua encomenda foi confirmada!");
             getLastOrders();
-            imageReference.value = "";
         });
         request.catch(function () {
             alert("Ops, não conseguimos processar sua encomenda... Tente novamente!");
